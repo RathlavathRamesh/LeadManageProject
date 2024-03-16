@@ -1,55 +1,25 @@
 import Image from "next/image";
 import { TbHexagonNumber0 } from "react-icons/tb";
-import { VscKey } from "react-icons/vsc";
+import SideBarItem from './components/SidebarItems/page'
 
-
+const InconsArray=[{IncoName:"VscKey",headingName:"Dashboard",id:1},{IncoName:"GrInstagram",headingName:"Products",id:2},{IncoName:"LuContact2",headingName:"Customer",id:3},{IncoName:"TbHexagonNumber0",headingName:"Income",id:4},{IncoName:"TbHexagonNumber0",headingName:"Remote",id:5},{IncoName:"TbHexagonNumber0",headingName:"Help",id:6}]
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-row  bg-white">
        <div className=" flex flex-col justify-between p-3 w-[25vw]">
         <div>
-          <div className="flex flex-row ml-2">
+          <div className="flex flex-row ml-2 ">
              <div>
-              <TbHexagonNumber0 className="sm:text-1xl text-3xl pt-1" />
+              <TbHexagonNumber0 className="sm:text-1xl text-3xl pt-1 pl-1" />
               </div>
-             <h1 className="font-bold font-serif text-2xl pl-3  hidden md:block">Dashboard<span className="text-[15px] font-thin text-gray-300 ">v.01</span> </h1>
+             <h1 className="font-bold font-serif text-2xl  hidden md:block">Dashboard<span className="text-[15px] font-thin text-gray-300 ">v.01</span> </h1>
             </div>
-          <div  className="flex flex-row h-[7vh] flex  items-center mt-3 rounded-lg hover:bg-blue-700 hover:text-white hover:border-rounded">
-            <div>
-            <VscKey className="text-3xl"  />
-            </div>
-            <h1 className="text-gray-300   hover:text-white text-2xl pl-3 hidden md:block">Dashboard</h1>
-          </div>
-          <div  className="flex flex-row h-[7vh] flex  items-center mt-3 rounded-lg hover:bg-blue-700 text-gray-300   hover:text-white hover:border-rounded">
-            <div>
-            <VscKey className="text-3xl"  />
-            </div>
-            <h1 className="text-2xl pl-3 hidden md:block">Product</h1>
-          </div>
-          <div  className="flex flex-row h-[7vh] flex  items-center mt-3 rounded-lg hover:bg-blue-700   text-gray-300   hover:text-white hover:border-rounded">
-            <div>
-            <VscKey className="text-3xl"  />
-            </div>
-            <h1 className="text-2xl pl-3 hidden md:block">Customer</h1>
-          </div>
-          <div  className="flex flex-row h-[7vh] flex  items-center mt-3 rounded-lg hover:bg-blue-700 text-gray-300   hover:text-white hover:border-rounded">
-            <div>
-            <VscKey className="text-3xl"  />
-            </div>
-            <h1 className=" text-2xl pl-3 hidden md:block">Income</h1>
-          </div>
-          <div  className="flex flex-row h-[7vh] flex  items-center mt-3 rounded-lg hover:bg-blue-700 text-gray-300   hover:text-white hover:border-rounded">
-            <div>
-            <VscKey className="text-3xl"  />
-            </div>
-            <h1 className=" text-2xl pl-3 hidden md:block">Remote</h1>
-          </div>
-          <div  className="flex flex-row h-[7vh] flex  items-center mt-3 rounded-lg hover:bg-blue-700 text-gray-300   hover:text-white hover:border-rounded">
-            <div>
-            <VscKey className="text-3xl"  />
-            </div>
-            <h1 className="text-2xl pl-3 hidden md:block">Help</h1>
-          </div>
+           
+           {
+            InconsArray.map((each)=>(
+              <SideBarItem Item={each} key={each.id}/>
+            ))
+           }
           </div>
          <h1>Hii Iam Bottom Card</h1>
         </div>
