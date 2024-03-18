@@ -1,6 +1,15 @@
-"use client"
+import React, { useState, useEffect } from 'react';
 const UserCard=(props)=>{
+    const [isClient, setIsClient] = useState(false);
+    useEffect(() => {
+        setIsClient(true);
+      }, []);
+      
     const {item}=props 
+    if (!item || !item.name || !item.companyName || !item.phoneNumber || !item.email || !item.country || !item.status) {
+        return null; // or return a placeholder component or message
+    }
+
     return (
        <>
        <tr className="flex mt-3 text-[15px] text-black  flex-row justify-around ">

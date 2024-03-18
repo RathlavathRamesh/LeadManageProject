@@ -1,5 +1,10 @@
-"use client"
+import React, { useState, useEffect } from 'react';
 const MembersStatus=()=>{
+    const [isClient, setIsClient] = useState(false);
+    useEffect(() => {
+        setIsClient(true);
+      }, []);      
+
     return (
         <div className="flex  flex-col md:flex-row justify-between bg-white  h-auto   w-[60vw] mt-5 rounded sm:rounded-lg md:rounded-xl p-5">
         <div className="flex flex-row "> 

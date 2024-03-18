@@ -1,10 +1,7 @@
-"use client"
 import SideBar from "./components/SideBar"     
 import MembersStatus from "./components/MemberStatus"
 import UserDetails from "./components/UserDetails"
 export default function Home() {
-  // const [selectedOption, setSelectedOption] = useState('');
-  // const [pageNo,setPageNo]=useState(1);
 
   return (
     <main className="flex min-h-screen flex-row  bg-white">

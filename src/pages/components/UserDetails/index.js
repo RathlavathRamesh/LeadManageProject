@@ -1,7 +1,6 @@
-"use client"
+import React, { useState, useEffect } from 'react';
 const { v4: uuidv4 } = require('uuid');
 import Link from 'next/link';
-import { useState } from 'react';
 import UserCard from '../UserCard/index'
 import PageTopSection from '../TabletopSection/index'
 const sampleData= [
@@ -116,6 +115,12 @@ const sampleData= [
   ]; 
        
 const UserDetails=()=>{
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);  
+
   const prevPage=()=>{
     const prevPageIndex=currentPage-1;
     if(prevPageIndex>=1){

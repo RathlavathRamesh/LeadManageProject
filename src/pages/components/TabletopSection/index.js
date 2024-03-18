@@ -1,5 +1,10 @@
-"use client"
+import React, { useState, useEffect } from 'react';
 const PageTopSection=()=>{
+    const [isClient, setIsClient] = useState(false);
+    useEffect(() => {
+        setIsClient(true);
+      }, []);
+      
     return (
         <div className="flex flex-row justify-between">
         <div className="pl-4">
