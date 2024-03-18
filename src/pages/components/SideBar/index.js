@@ -17,7 +17,8 @@ const SideBar=()=>{
       }, []);
       
     return (
-        <div>
+      <>
+      <div>
         <div className="flex flex-row ml-2 ">
            <div>
             <TbHexagonNumber0 className="sm:text-1xl text-3xl pt-1 pl-1" />
@@ -30,6 +31,20 @@ const SideBar=()=>{
           ))
          }
         </div>
+       <div className=" bg-gradient-to-br hidden md:block from-[#7232b8]  to-blue-500 p-4 rounded-lg h-[20vh] w-[15vw] flex flex-col justify-center items-center">
+            <h1 className="text-white font-bold text-center">upgrade to PRO to access all Features</h1>
+            <button className="bg-white border-none  mt-4 ml-3 rounded-xl text-blue-400 px-3 ">Get Pro Now</button>
+        </div>
+      <div className="flex flex-row "> 
+      <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png"  alt="Product Manager" className=" h-[6vh] w-[3vw] rounded-full"/>
+        <div className="pl-3">
+          <div className="pl-3">
+            <h1 className=" text-thin text-black hidden md:block"> Evano</h1>
+            <p  className="text-gray-400 hidden md:block">Project Manager </p>
+        </div>
+        </div>
+      </div>
+      </>
     )
 }
 
