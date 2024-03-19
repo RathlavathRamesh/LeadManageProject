@@ -137,7 +137,7 @@ const UserDetails=()=>{
     setCurrentPage(id);
   }
   const [currentPage,setCurrentPage]=useState(1);
-  const recordsPerPage=2;
+  const recordsPerPage=5;
   const lastIndex=currentPage*recordsPerPage;
   const firstIndex=lastIndex-recordsPerPage;
   const records=sampleData.slice(firstIndex,lastIndex);
