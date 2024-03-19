@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const MembersStatus=()=>{
     const [isClient, setIsClient] = useState(false);
     useEffect(() => {
@@ -12,13 +13,21 @@ const MembersStatus=()=>{
         <div className="pl-3">
         <h1 className="text-gray-400 text-thin">Total Customers </h1>
           <h1 className="text-black">5,432</h1>
-        </div>
+          <div className='flex flex-row'>
+          <svg xmlns="http://www.w3.org/2000/svg" className='pt-1' height={"20px"} fontWeight={"bold"} width={"20px"} viewBox="0 0 384 512"><path fill="green" d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg>
+           <p className='text-black'><span className='text-green-500'>16%</span> This Month</p>
+          </div>
+           </div>
       </div>
       <div className="flex flex-row "> 
       <svg width="50px" height="50px" viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4" fill="#9fffac" stroke-width="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 8.5C8.5 6.56625 10.0663 5 12 5C13.9338 5 15.5 6.56625 15.5 8.5C15.5 10.4338 13.9338 12 12 12C10.0663 12 8.5 10.4338 8.5 8.5ZM12 6.75C12.9625 6.75 13.75 7.5375 13.75 8.5C13.75 9.4625 12.9625 10.25 12 10.25C11.0375 10.25 10.25 9.4625 10.25 8.5C10.25 7.5375 11.0375 6.75 12 6.75Z" fill="#2ad518"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 13.75C9.66375 13.75 5 14.9225 5 17.25V19H19V17.25C19 14.9225 14.3363 13.75 12 13.75ZM12 15.5C14.3625 15.5 17.075 16.6287 17.25 17.25H6.75C6.95125 16.62 9.64625 15.5 12 15.5Z" fill="#2ad518"></path> <path d="M21.4025 8.58002L21.99 9.17168L18.6567 12.505L16.99 10.8425L17.5817 10.255L18.6567 11.3259L21.4025 8.58002Z" fill="#2ad518"></path> </g></svg> <div className="pl-3">
       <div className="pl-3">
         <h1 className="text-gray-400 text-thin">Memebers</h1>
           <h1  className="text-black">1,893</h1>
+          <div className='flex flex-row'>
+          <svg xmlns="http://www.w3.org/2000/svg" className='pt-1' height={"20px"} fontWeight={"bold"} width={"20px"} viewBox="0 0 384 512"><path fill="#ff2600" d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
+           <p className='text-black'><span className='text-red-500'>1%</span> This Month</p>
+          </div>
         </div>
         </div>
       </div>
