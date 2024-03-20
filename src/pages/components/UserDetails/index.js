@@ -151,7 +151,7 @@ const UserDetails=()=>{
           <li onClick={prevPage}>
                 <Link href="#">
                 <div className="flex items-center justify-center mr-2 h-[2rem] w-[2rem] bg-gray-200  rounded-md">
-            <FaLessThan className=" w-4 h-4" />
+            <FaLessThan className="w-[0.8rem] h-[0.8rem]" />
               </div>
                 </Link>
           </li>
@@ -168,10 +168,8 @@ const UserDetails=()=>{
           }
           <li onClick={nextPage}>
               <Link href="#">
-             {/* // <div className="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md mr-2">
-                //   </div> */}
             <div className="flex items-center justify-center  h-[2rem] w-[2rem] bg-gray-200 rounded-md">
-            <FaGreaterThan className="w-4 h-4" />
+            <FaGreaterThan className="w-[0.8rem] h-[0.8rem]" />
               </div>
          </Link>
           </li>

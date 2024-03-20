@@ -13,34 +13,34 @@ const InconsArray=[
   ]
   
 const SideBar=()=>{
-    const [isClient, setIsClient] = useState(false);
-    useEffect(() => {
-        setIsClient(true);
-      }, []);
-      
+    const [minimizeMe, setMenimize] = useState(false);
+  
+    const setMenimizeFuntion=()=>{
+      setMenimize(prev=>!prev)
+    }
     return (
       <>
       <div>
         <div className="flex flex-row ml-2 ">
            <div>
-            <TbHexagonNumber0 className="sm:text-1xl text-3xl pt-1 pl-1" />
+            <TbHexagonNumber0 className="sm:text-1xl text-3xl pt-1 pl-1" onClick={setMenimizeFuntion} />
             </div>
-           <h1 className="font-bold font-serif text-black text-2xl  hidden md:block">Dashboard<span className="text-[15px] font-thin text-gray-300 ">v.01</span> </h1>
+           <h1 className={`font-bold font-serif text-black text-2xl  hidden ${minimizeMe===false? "md:block":""}`}>Dashboard<span className="text-[15px] font-thin text-gray-300 ">v.01</span> </h1>
           </div>
          {
           InconsArray.map((each)=>(
-            <SideBarItem Item={each} key={each.id}/>
+            <SideBarItem Item={each} isMinimize={minimizeMe} key={each.id} minimizeFuntion={setMenimizeFuntion}/>
           ))
          }
         </div>
-       <div className="relative bg-gradient-to-br hidden md:block from-[#7232b8]  to-blue-500 p-4 rounded-lg h-[10rem] w-[10rem] flex-col justify-center items-center">
+       <div className={`relative bg-gradient-to-br hidden ${minimizeMe===false? "md:block":""}  from-[#7232b8]  to-blue-500 p-4 rounded-lg h-[10rem] w-[10rem] flex-col justify-center items-center`}>
             <h1 className="text-white font-bold text-[1rem] text-center">upgrade to PRO to access all Features</h1>
             <button className="bg-white border-none  mt-4 ml-3 rounded-xl text-blue-400 px-3 ">Get Pro Now</button>
         </div>
       <div className="flex flex-row "> 
       <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png"  alt="Product Manager" className=" h-[6vh] w-[3vw] rounded-full"/>
         <div className="pl-3">
-          <div className="pl-3">
+          <div className={`pl-3 hidden ${minimizeMe===false? "md:block":""} `}>
             <h1 className=" text-thin text-black hidden md:block"> Evano</h1>
             <p  className="text-gray-400 hidden md:block">Project Manager </p>
         </div>
