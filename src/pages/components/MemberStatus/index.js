@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const MembersStatus=()=>{
-    const [isClient, setIsClient] = useState(false);
-    useEffect(() => {
-        setIsClient(true);
-      }, []);      
-
     return (
         <div className="flex relative flex-col md:flex-row justify-around bg-white  h-auto shadow-md    w-full mt-5 rounded sm:rounded-lg md:rounded-xl p-5">
         <div className="flex flex-row "> 

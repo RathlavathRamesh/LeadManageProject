@@ -1,6 +1,9 @@
 import React, { useReducer } from 'react'
 
 const UsersTable = ({records}) => {
+   
+    if(!records) 
+       return ;
   return (
     <div className='mt-[2rem]'>
     <table className='w-full'>

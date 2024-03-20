@@ -14,7 +14,7 @@ const InconsArray=[
   
 const SideBar=()=>{
     const [minimizeMe, setMenimize] = useState(false);
-  
+    
     const setMenimizeFuntion=()=>{
       setMenimize(prev=>!prev)
     }
