@@ -33,8 +33,8 @@ const SideBar=()=>{
           ))
          }
         </div>
-       <div className=" bg-gradient-to-br hidden md:block from-[#7232b8]  to-blue-500 p-4 rounded-lg h-[20vh] w-[15vw] flex flex-col justify-center items-center">
-            <h1 className="text-white font-bold text-center">upgrade to PRO to access all Features</h1>
+       <div className="relative bg-gradient-to-br hidden md:block from-[#7232b8]  to-blue-500 p-4 rounded-lg h-[10rem] w-[10rem] flex-col justify-center items-center">
+            <h1 className="text-white font-bold text-[1rem] text-center">upgrade to PRO to access all Features</h1>
             <button className="bg-white border-none  mt-4 ml-3 rounded-xl text-blue-400 px-3 ">Get Pro Now</button>
         </div>
       <div className="flex flex-row "> 

@@ -8,7 +8,7 @@ export default function Home() {
        <div className=" flex flex-col justify-between p-3 w-[25vw]">
         <SideBar/>
         </div>
-        <div className="bg-[#f0f5f1] w-full p-10">
+        <div className="bg-[#f5f7f7] w-full p-10">
           <h1 className="font-bold text-black text-2xl">Hello Evano 👋,</h1>
            <MembersStatus/>
            <UserDetails/>

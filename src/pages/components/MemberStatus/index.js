@@ -7,7 +7,7 @@ const MembersStatus=()=>{
       }, []);      
 
     return (
-        <div className="flex  flex-col md:flex-row justify-between bg-white  h-auto   w-[60vw] mt-5 rounded sm:rounded-lg md:rounded-xl p-5">
+        <div className="flex relative flex-col md:flex-row justify-around bg-white  h-auto shadow-md    w-full mt-5 rounded sm:rounded-lg md:rounded-xl p-5">
         <div className="flex flex-row "> 
            <svg width="50px" height="50px" viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="green"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4" fill="#9fffac" strok-ewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="9" cy="6" r="4" stroke="green" stroke-width="1.5"></circle> <path d="M15 9C16.6569 9 18 7.65685 18 6C18 4.34315 16.6569 3 15 3" stroke="green" stroke-width="1.5" stroke-linecap="round"></path> <ellipse cx="9" cy="17" rx="7" ry="4" stroke="green" stroke-width="1.5"></ellipse> <path d="M18 14C19.7542 14.3847 21 15.3589 21 16.5C21 17.5293 19.9863 18.4229 18.5 18.8704" stroke="green" stroke-width="1.5" stroke-linecap="round"></path></g></svg>
         <div className="pl-3">
@@ -15,7 +15,7 @@ const MembersStatus=()=>{
           <h1 className="text-black">5,432</h1>
           <div className='flex flex-row'>
           <svg xmlns="http://www.w3.org/2000/svg" className='pt-1' height={"20px"} fontWeight={"bold"} width={"20px"} viewBox="0 0 384 512"><path fill="green" d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg>
-           <p className='text-black'><span className='text-green-500'>16%</span> This Month</p>
+           <p className='text-black'><span className='text-green-500 decoration-2'>16%</span> this month</p>
           </div>
            </div>
       </div>
@@ -26,7 +26,7 @@ const MembersStatus=()=>{
           <h1  className="text-black">1,893</h1>
           <div className='flex flex-row'>
           <svg xmlns="http://www.w3.org/2000/svg" className='pt-1' height={"20px"} fontWeight={"bold"} width={"20px"} viewBox="0 0 384 512"><path fill="#ff2600" d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
-           <p className='text-black'><span className='text-red-500'>1%</span> This Month</p>
+           <p className='text-black'><span className='text-red-500'>1%</span> this month</p>
           </div>
         </div>
         </div>

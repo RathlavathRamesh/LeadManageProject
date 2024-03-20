@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 const { v4: uuidv4 } = require('uuid');
+import { FaGreaterThan } from "react-icons/fa6";
+import { FaLessThan } from "react-icons/fa6";
 import Link from 'next/link';
-import UserCard from '../UserCard/index'
+import UsersTable from '../UsersTable'
 import PageTopSection from '../TabletopSection/index'
 const sampleData= [
     {
@@ -115,18 +117,13 @@ const sampleData= [
   ]; 
        
 const UserDetails=()=>{
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);  
-
   const prevPage=()=>{
     const prevPageIndex=currentPage-1;
     if(prevPageIndex>=1){
       setCurrentPage(prevPageIndex)
     }
   }
+
   const nextPage=()=>{
     const nextPageIndex = currentPage + 1;
     if (nextPageIndex <= noOfPages) {
@@ -144,42 +141,25 @@ const UserDetails=()=>{
   const noOfPages=Math.ceil(sampleData.length/recordsPerPage)
   const numbers = Array.from({ length: noOfPages }, (_, index) => index + 1);
     return (
-        <div className="bg-white p-5 mt-5 rounded-[20px] max-h-[90vh]  h-auto md:w-full">
+      <div className="bg-white px-4 pt-3 mt-[1rem] pb-4 rounded-xl">
               <PageTopSection/>
-        <table >
-          <thead  className='table text-gray-400 mt-3 p-3'>
-              <th className='px-8' >Name</th>
-              <th className='px-8'>Company Name</th>
-              <th className='px-4'>Phone Number</th>
-              <th className='px-8'>Email</th>
-              <th className='px-8'>Country</th>
-              <th className='px-8'>Status</th>
-          </thead>
-      <hr className="text-gray-500  mt-2"/>
-      <tbody>
-      {
-          records.map((each)=>(
-            <UserCard item={each} key={each.id}/>
-          ))
-        }
-      </tbody>
-      </table>
+              <UsersTable records={records}/>
        <div className='flex flex-row justify-between'>
        <p className='text-gray-400'>Showing page {currentPage} of {noOfPages}</p>
        <nav>
         <ul className='flex flex-row p-3 text-gray-400'>
           <li onClick={prevPage}>
                 <Link href="#">
-                <div className="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md mr-2">
-                    <span className="text-gray-700">Previous</span>
-                  </div>
+                <div className="flex items-center justify-center mr-2 h-[2rem] w-[2rem] bg-gray-200  rounded-md">
+            <FaLessThan className=" w-4 h-4" />
+              </div>
                 </Link>
           </li>
           {
             numbers.map((n,ind)=>(
               <li key={ind} onClick={() => changePage(n)}>
                       <Link href="#">
-                      <div className={`flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md mr-2 ${currentPage === n ? 'bg-blue-500' : ''}`}>
+                      <div className={`flex items-center justify-center h-[2rem] w-[2rem] rounded-md  mr-2 ${currentPage === n ? 'bg-blue-500' : 'bg-gray-200'}`}>
                         <span className="text-gray-700">{n}</span>
                       </div>
                       </Link>
@@ -188,10 +168,12 @@ const UserDetails=()=>{
           }
           <li onClick={nextPage}>
               <Link href="#">
-              <div className="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md mr-2">
-                  <span className="text-gray-700">Next</span>
-                </div>
-              </Link>
+             {/* // <div className="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md mr-2">
+                //   </div> */}
+            <div className="flex items-center justify-center  h-[2rem] w-[2rem] bg-gray-200 rounded-md">
+            <FaGreaterThan className="w-4 h-4" />
+              </div>
+         </Link>
           </li>
         </ul>
       </nav>
