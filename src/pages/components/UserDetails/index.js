@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 const { v4: uuidv4 } = require('uuid');
-import { FaGreaterThan } from "react-icons/fa6";
-import { FaLessThan } from "react-icons/fa6";
+import { FaGreaterThan,FaLessThan } from "react-icons/fa6";
 import Link from 'next/link';
 import UsersTable from '../UsersTable'
 import PageTopSection from '../TabletopSection/index'
@@ -140,18 +139,19 @@ const UserDetails=()=>{
   const records=sampleData.slice(firstIndex,lastIndex);
   const noOfPages=Math.ceil(sampleData.length/recordsPerPage)
   const numbers = Array.from({ length: noOfPages }, (_, index) => index + 1);
+  const lastEntry=lastIndex>sampleData.length?sampleData.length:lastIndex;
     return (
-      <div className="bg-white px-4 pt-3 mt-[1rem] pb-4 rounded-xl">
+      <div className="bg-white px-4 shadow-lg  p-[5rem]  sm:rounded-lg md:rounded-xl pt-3 mt-[3rem] pb-4 rounded-xl">
               <PageTopSection/>
               <UsersTable records={records}/>
        <div className='flex flex-row justify-between'>
-       <p className='text-gray-400'>Showing page {currentPage} of {noOfPages}</p>
+       <p className='text-gray-400 pt-[1rem]'>Showing data {firstIndex+1} to {lastEntry} of {sampleData.length} entries</p>
        <nav>
-        <ul className='flex flex-row p-3 text-gray-400'>
+        <ul className='flex flex-row  p-3 text-gray-400'>
           <li onClick={prevPage}>
                 <Link href="#">
-                <div className="flex items-center justify-center mr-2 h-[2rem] w-[2rem] bg-gray-200  rounded-md">
-            <FaLessThan className="w-[0.8rem] h-[0.8rem]" />
+                <div className="flex items-center font-[Poppins] justify-center mr-2 h-[2rem] w-[2rem] bg-gray-200  rounded-md">
+                     <FaLessThan className="w-[0.8rem] h-[0.8rem]" />
               </div>
                 </Link>
           </li>
@@ -159,7 +159,7 @@ const UserDetails=()=>{
             numbers.map((n,ind)=>(
               <li key={ind} onClick={() => changePage(n)}>
                       <Link href="#">
-                      <div className={`flex items-center justify-center h-[2rem] w-[2rem] rounded-md  mr-2 ${currentPage === n ? 'bg-blue-500' : 'bg-gray-200'}`}>
+                      <div className={`flex items-center justify-center h-[2rem] font-[Poppins] w-[2rem] rounded-md  mr-2 ${currentPage === n ? 'bg-blue-500' : 'bg-gray-200'}`}>
                         <span className="text-gray-700">{n}</span>
                       </div>
                       </Link>
@@ -168,8 +168,8 @@ const UserDetails=()=>{
           }
           <li onClick={nextPage}>
               <Link href="#">
-            <div className="flex items-center justify-center  h-[2rem] w-[2rem] bg-gray-200 rounded-md">
-            <FaGreaterThan className="w-[0.8rem] h-[0.8rem]" />
+            <div className="flex items-center justify-center font-[Poppins]  h-[2rem] w-[2rem] bg-gray-200 rounded-md">
+                <FaGreaterThan className="w-[0.8rem] h-[0.8rem]" />
               </div>
          </Link>
           </li>

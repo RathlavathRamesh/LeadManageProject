@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 const PageTopSection=()=>{
-     
+
     return (
-        <div className="flex flex-row justify-between">
+        <div className="flex flex-row font-[Poppins] justify-between">
         <div className="pl-4">
-        <h1 className="font-bold text-black text-2xl">All Customers</h1>
-        <p className="text-green-400">Active Members</p>
+        <h1 className="font-bold text-black text-[1.5rem]">All Customers</h1>
+        <p className="text-[#16C098]">Active Members</p>
         </div>
             <div className="flex items-center">
             <div className="relative mr-4">
@@ -17,10 +17,10 @@ const PageTopSection=()=>{
             <input 
             type="text" 
             placeholder="Search..."
-            className="block max-w-[12vw] text-[0.8rem]  pl-10 pr-4 bg py-2 border bg-[#f5faf9] border-gray-300 rounded-md leading-tight focus:outline-none focus:border-[#f0f5f1]"
+            className="block max-w-[12vw] text-[0.8rem]  pl-10 pr-4 bg py-2 border bg-[#FAFBFF] rounded-md leading-tight focus:outline-none focus:border-[#f0f5f1]"
             />
             </div>
-            <div className="flex items-center flex-row  rounded-md p-3 h-[6vh] w-ful bg-[#f5faf9]">
+            <div className="flex items-center flex-row  h-[3rem] rounded-md p-3 max-h-[2.4rem] w-ful bg-[#FAFBFF]">
             <p className="text-md text-gray-300">Sort By:</p>
             <select 
                 className="block border border-none min-w-[10vw] bg-[#f5faf9] border-white rounded-md leading-tight  text-sm focus:outline-none focus:border-blue-500"
