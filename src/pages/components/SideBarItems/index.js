@@ -16,7 +16,7 @@ const  SideBarItem=(prop)=>{
     }
     //${clickedItemId===Item.id? "bg-[#5932EA] text-white":"text-[#9197B3]"}
     return (
-    <div onClick={changeItemId}  className={`flex flex-row h-[3rem] cursor-pointer hover:bg-[#5932EA] text-white justify-between items-center mt-[1rem] rounded-lg font-[500]  `}>
+    <div onClick={changeItemId}  className={`flex flex-row h-[3rem] text-[#9197B3] cursor-pointer hover:bg-[#5932EA] hover:text-white justify-between items-center mt-[1rem] rounded-lg font-[500]  `}>
        <div className="flex flex-row">
        <div className="text-3xl pl-1" onClick={minizmize}>
         {Item.svgElement}
@@ -29,4 +29,6 @@ const  SideBarItem=(prop)=>{
     </div>
     ) 
 }
-export default SideBarItem
+export default SideBarItem 
+
+
