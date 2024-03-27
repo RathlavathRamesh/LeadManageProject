@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 const MembersStatus=()=>{
     return (
       <div className="flex relative flex-row justify-around bg-white  h-auto shadow-xl font-[Poppins]  height-[10rem]  border-solid  border-[#F0F0F0]  w-full mt-5  rounded-xl p-5">
@@ -38,10 +39,10 @@ const MembersStatus=()=>{
         <h1 className="text-gray-400 text-thin">Active Now </h1>
           <h1  className="text-black">189</h1>
               <div className='flex flex-row'>
-               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Virat_Kohli_portrait.jpg/1132px-Virat_Kohli_portrait.jpg?20180427075657" className="rounded-full w-5 h-5 relative z-10" alt="Small Image" />
-               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/The_President%2C_Shri_Pranab_Mukherjee_presenting_the_Padma_Shri_Award_to_Shri_Virat_Kohli%2C_at_a_Civil_Investiture_Ceremony%2C_at_Rashtrapati_Bhavan%2C_in_New_Delhi_on_March_30%2C_2017_%28cropped%29.jpg/460px-thumbnail.jpg" className="rounded-full w-5 h-5 relative -ml-2 z-20" alt="Small Image" />
-               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/The_President%2C_Shri_Pranab_Mukherjee_presenting_the_Padma_Shri_Award_to_Shri_Virat_Kohli%2C_at_a_Civil_Investiture_Ceremony%2C_at_Rashtrapati_Bhavan%2C_in_New_Delhi_on_March_30%2C_2017_%28cropped%29.jpg/460px-thumbnail.jpg" className="rounded-full w-5 h-5 relative -ml-2 z-20" alt="Small Image" />
-               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/The_President%2C_Shri_Pranab_Mukherjee_presenting_the_Padma_Shri_Award_to_Shri_Virat_Kohli%2C_at_a_Civil_Investiture_Ceremony%2C_at_Rashtrapati_Bhavan%2C_in_New_Delhi_on_March_30%2C_2017_%28cropped%29.jpg/460px-thumbnail.jpg" className="rounded-full w-5 h-5 relative -ml-2 z-20" alt="Small Image" />
+               <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Virat_Kohli_portrait.jpg/1132px-Virat_Kohli_portrait.jpg?20180427075657" className="rounded-full w-5 h-5 relative z-10" alt="Small Image" />
+               <imImageg src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/The_President%2C_Shri_Pranab_Mukherjee_presenting_the_Padma_Shri_Award_to_Shri_Virat_Kohli%2C_at_a_Civil_Investiture_Ceremony%2C_at_Rashtrapati_Bhavan%2C_in_New_Delhi_on_March_30%2C_2017_%28cropped%29.jpg/460px-thumbnail.jpg" className="rounded-full w-5 h-5 relative -ml-2 z-20" alt="Small Image" />
+               <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/The_President%2C_Shri_Pranab_Mukherjee_presenting_the_Padma_Shri_Award_to_Shri_Virat_Kohli%2C_at_a_Civil_Investiture_Ceremony%2C_at_Rashtrapati_Bhavan%2C_in_New_Delhi_on_March_30%2C_2017_%28cropped%29.jpg/460px-thumbnail.jpg" className="rounded-full w-5 h-5 relative -ml-2 z-20" alt="Small Image" />
+               <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/The_President%2C_Shri_Pranab_Mukherjee_presenting_the_Padma_Shri_Award_to_Shri_Virat_Kohli%2C_at_a_Civil_Investiture_Ceremony%2C_at_Rashtrapati_Bhavan%2C_in_New_Delhi_on_March_30%2C_2017_%28cropped%29.jpg/460px-thumbnail.jpg" className="rounded-full w-5 h-5 relative -ml-2 z-20" alt="Small Image" />
               </div>
         </div>
         </div>

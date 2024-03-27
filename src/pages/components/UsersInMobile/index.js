@@ -1,8 +1,7 @@
-import React, { use } from 'react'
+import React, { useState } from 'react'
 const { v4: uuidv4 } = require('uuid');
 import { FaGreaterThan,FaLessThan } from "react-icons/fa6";
 import Link from 'next/link';
-import { useState } from 'react';
 import UserButton from '../UserButton'
 
 const sampleData= [

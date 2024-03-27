@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { X } from 'lucide-react';
 const UserButton = ({item}) => {
-    if(!item) return;
-  const [showDetails,setShowDetails]=useState(false);
-
+    const [showDetails,setShowDetails]=useState(false);
+    if(!item){
+        return ;
+    }
   const showUserData=()=>{
-    console.log("wrong is Clicked")
    setShowDetails((prev=>(!prev)))
   }
   console.log(showDetails)
