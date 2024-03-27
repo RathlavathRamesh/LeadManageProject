@@ -2,7 +2,6 @@ import { useState } from "react";
 import { VscChevronRight } from "react-icons/vsc";
 
 const  SideBarItem=(prop)=>{
-  const [clickedItemId,setItemClicked]=useState(null);
     const {Item,minimizeFuntion,isMinimize}=prop 
     if (!Item || !Item.headingName || !Item.svgElement) {
         return null; 
@@ -16,7 +15,7 @@ const  SideBarItem=(prop)=>{
     }
     //${clickedItemId===Item.id? "bg-[#5932EA] text-white":"text-[#9197B3]"}
     return (
-    <div onClick={changeItemId}  className={`flex flex-row h-[3rem] text-[#9197B3] cursor-pointer hover:bg-[#5932EA] hover:text-white justify-between items-center mt-[1rem] rounded-lg font-[500]  `}>
+    <div   className={`flex flex-row h-[3rem] text-[#9197B3] cursor-pointer hover:bg-[#5932EA] hover:text-white justify-between items-center mt-[1rem] rounded-lg font-[500]  `}>
        <div className="flex flex-row">
        <div className="text-3xl pl-1" onClick={minizmize}>
         {Item.svgElement}

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 const PageTopSection=()=>{
 
     return (
-        <div className="flex flex-row font-[Poppins] justify-between">
+    <div className="flex flex-row font-[Poppins] justify-between">
         <div className="pl-4">
         <h1 className="font-bold text-black text-[1.5rem]">All Customers</h1>
         <p className="text-[#16C098]">Active Members</p>
